@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.field {
+    width: 100%;
+    height: 75%;
+}
+.menu {
+    position: relative;
+    background-color: white;
+    width: 100%;
+    height: 25%;
+}
+.player {
+    position: absolute;
+    display: flex;
+}
+.computer {
+    position: absolute;
+    display: flex;
+}
+.HP1 {
+    padding: 10px;
+    position: absolute;
+    top: -30px;
+    left: -200px;
+    width: 300px;
+    height: 80px;
+    background-color: white;
+    box-shadow: 7px 4px 0px 0px;
+    border: 3px solid black;
+}
+.HP2 {
+    padding: 10px;
+    position: absolute;
+    top: 15px;
+    right: 350px;
+    width: 300px;
+    height: 80px;
+    background-color: white;
+    box-shadow: 7px 4px 0px 0px;
+    border: 3px solid black;
+}
+.name1 {
+    padding: 5px;
+    text-transform: capitalize;
+    font-size: 1.5em;
+    color: white;
+    background-color: blue;
+    border-radius: 10px;
+}
+.name2 {
+    padding: 5px;
+    font-size: 1.5em;
+    text-transform: capitalize;
+    color: white;
+    background-color: red;
+    border-radius: 10px;
+}
+.HPbar {
+    width: 300px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.hpplayer {
+    width: 300px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: greenyellow;
+}
+.hpcomputer {
+    width: 300px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: greenyellow;
+}
+.skills {
+    width: 700px;
+    height: 100px;
+    border: 1px solid black;
+    text-transform: capitalize;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-right: 12px solid grey;
+}
+.skills:hover {
+    transition: 0.5s;
+    border-right: 12px solid red;
+}
+.skills:hover .nama {
+    background-color: black;
+    transition: 0.4s;
+    color: white;
+}
+.nama {
+    padding-left: 10px;
+    color: black;
+    font-size: 1.5em;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+.acc {
+    padding-left: 10px;
+    font-weight: 900;
+}
+.power {
+    padding-left: 10px;
+    font-weight: 900;
+}
+.type {
+    padding-left: 10px;
+    font-weight: 900;
+}
+.log {
+    width: 700px;
+    height: 120px;
+    text-transform: capitalize;
+}
+.table {
+    table-layout: fixed;
+    height: 10px;
+    max-height: 25px;
+}
+.turn {
+    border:1px solid black;
+}
+.pokemon1{
+    position: relative;
+}
+.pokemon2{
+    position: relative;
+}
+.logplay {
+    color:red;
+}
+.logcomp {
+    color: blue;
+}
