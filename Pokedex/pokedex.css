@@ -1,0 +1,45 @@
+body {
+  font-family: "Kalam", cursive;
+  background-color: cornflowerblue;
+  color: white;
+}
+.searchcont {
+  margin-left: 33%;
+}
+.pokecont {
+  border: 2px solid rgb(255, 255, 255);
+  width: 200px;
+  margin: 50px;
+  margin-left: 42%;
+}
+.type {
+  text-align: center;
+}
+.type:hover {
+  background: black;
+  color: white;
+}
+h1 {
+  text-align: center;
+  color: black;
+}
+.nama {
+  text-align: center;
+  border-top: solid 1px white;
+}
+.berat {
+  text-align: center;
+}
+img {
+  width: 200px;
+  height: 200px;
+}
+.nama:hover,
+.berat:hover {
+  background: black;
+  color: white;
+}
+#list {
+  background-color: cornflowerblue;
+  border: 0.5px solid white;
+}
