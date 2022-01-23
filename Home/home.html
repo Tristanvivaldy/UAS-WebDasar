@@ -1,0 +1,128 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="home.js" />
+    <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalam&display=swap"
+      rel="stylesheet"
+    />
+    <title>Home</title>
+  </head>
+  <body>
+    <h1>HéFATRI</h1>
+    <div class="gallery"></div>
+    <div class="games"></div>
+    <div class="filmcont">
+      <div class="film1">
+        <h3>Pokémon GO Games Trailer</h3>
+        <video controls>
+          <source src="assets/pokego.mkv" />
+        </video>
+      </div>
+      <div class="film2">
+        <h3>Pokémon: Detective Pikachu Trailer</h3>
+        <video controls>
+          <source src="assets/pokedetcv.mp4" />
+        </video>
+      </div>
+      <div class="film3">
+        <h3>Pokémon Legends: Arceus Trailer</h3>
+        <video controls>
+          <source src="assets/pokearceus.mp4" />
+        </video>
+      </div>
+    </div>
+    <!-- Slider main container -->
+    <div class="pokecont">
+      <div class="feature">
+        <img src="assets/logo.png" alt="" id="logo" /> Featured Pokémon
+      </div>
+      <div>
+        <button>Explore More Pokémon</button>
+      </div>
+    </div>
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img src="assets/aerodactyl.png" alt="" />
+          Aerodactyl
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/leafeon.png" alt="" />
+          Leafeon
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/palkia.png" alt="" />
+          Palkia
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/raichu.png" alt="" />
+          Raichu
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/espeon.png" alt="" />
+          Espeon
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/gardevoir.png" alt="" />
+          Gardevoir
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/charizardgigan.png" alt="" />
+          Charizard Giganta Max
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/squirtle.png" alt="" />
+          Squirtle
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/megpidge.png" alt="" />
+          Mega Pidgeot
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+      });
+    </script>
+  </body>
+</html>

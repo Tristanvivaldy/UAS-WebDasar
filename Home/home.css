@@ -1,0 +1,63 @@
+body {
+  font-family: "Kalam", cursive;
+}
+h1 {
+  text-align: center;
+  font-family: "Pokemon Solid", sans-serif;
+  color: red;
+  width: 100%;
+  background: #ccc;
+  padding: auto;
+}
+.swiper {
+  height: 220px;
+  margin-top: 5px;
+  position: absolute;
+  margin-bottom: 40px;
+}
+.swiper-slide {
+  border-radius: 15px;
+  background: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  height: 200px;
+}
+.feature {
+  background: rgba(0, 0, 0, 0.5);
+  width: 190px;
+  color: white;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 20px;
+}
+video {
+  height: 200px;
+  width: 350px;
+  padding: 5px;
+}
+.filmcont {
+  display: flex;
+  text-align: center;
+  padding-left: 5%;
+}
+.pokecont {
+  margin-top: 20px;
+  display: flex;
+}
+button {
+  margin-left: 800px;
+  background-color: #ccc;
+  border-radius: 20px;
+  margin-top: 20px;
+  height: 30px;
+  color: black;
+  font-family: "Kalam", cursive;
+}
+#logo {
+  width: 23px;
+  height: 25px;
+  position: relative;
+}
