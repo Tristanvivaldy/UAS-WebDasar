@@ -1,0 +1,45 @@
+body {
+  font-family: "Kalam", cursive;
+}
+.tentang {
+  font-family: "Pokemon Solid", sans-serif;
+}
+.misi {
+  text-align: justify;
+  font-size: 30px;
+  color: white;
+}
+.team {
+  text-align: justify;
+  font-size: 15px;
+  color: white;
+}
+.detail {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-45%);
+  background-color: #2B4570;
+  padding: 50px;
+  width: 50%;
+  border: 1px solid black;
+  box-shadow: 7px 7px 0px 0px;
+}
+.tentang {
+  font-size: 50px;
+  text-align: center;
+}
+#our {
+  font-size: 40px;
+}
+.isi {
+  height: 100%;
+  background-image: url("../Assets/About/Background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h3 {
+  text-decoration: underline;
+  color: #F3E37C;
+  text-align: center;
+}

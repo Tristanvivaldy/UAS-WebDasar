@@ -1,0 +1,108 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalam&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="CSS/pokedex.css" />
+    <link rel="stylesheet" href="CSS/menu.css">
+    <title>Pokedex</title>
+  </head>
+  <body>
+    <nav id="mainmenu" class="menu">
+      <div class="button" onclick="toggle()"></div>
+      <div class="nav-menu">
+          <img src="Assets/Menu/Logo HFT.png" class="logoHFT"><div class="judul">HEFATRI</div>
+          <div class="isimenu">
+            <a href="home.html"><img src="Assets/Menu/Home.png" class="logohome"><div class="menus home">Home</div></a>
+            <div class="dropdown menus2">
+                <a href="#" class="arahcolor"><img src="Assets/Menu/Games.png" class="logogames"><div class="games">Games</div> <div class="arah">></div></a>
+                <div class="content-dropdown">
+                    <a href="Battle.html"><div class="isidrp">Battle Games</div></a>
+                    <a href="Guess.html"><div class="isidrp">Guessing Games</div></a>
+                    <a href="Catch.html"><div class="isidrp">Catching Games</div></a>
+                </div>
+            </div>
+            <a href="pokedex.html"><div><img src="Assets/Menu/Pokedex.png" class="logopokedex"></div><div class="menus pokedex">Pokedex</div></a>
+            <a href="Film.html"><div><img src="Assets/Menu/Film.png" class="logofilm"></div><div class="menus film">Films</div></a>
+            <a href="Gallery.html"><div><img src="Assets/Menu/Gallery.png" class="logogallery"></div><div class="menus gallery">Gallery</div></a>
+            <a href="About.html"><div><img src="Assets/Menu/About.png" class="logoabout"></div><div class="menus about">About</div></a>
+          </div>
+      </div>
+  </nav>
+  <script src="JS/menu.js"></script>
+  <!-- Isi -->
+  <div class="content">
+    <h1>Pokédex</h1>
+    <div class="searchcont">
+      <label for="list">Search Pokémon</label>
+      <input list="listpokemon" id="list" />
+      <datalist id="listpokemon"> </datalist>
+      <button onclick="seacrh()">Search</button>
+      <button onclick="random()">Random</button>
+    </div>
+    <hr />
+    <div class="pokecont">
+      <div class="gambar"></div>
+      <div class="nama"></div>
+      <div class="type"></div>
+      <div class="berat"></div>
+    </div>
+  </div>
+    <hr />
+    <script>
+      $.getJSON("https://pokeapi.co/api/v2/pokemon/", function (result) {
+        for (let i = 0; i < result.results.length; i++) {
+          document.querySelector("#listpokemon").innerHTML +=
+            "<option id ='list' value='" +
+            result.results[i].name +
+            "'></option>";
+        }
+      });
+      function seacrh() {
+        var poke = document.querySelector("#list").value;
+        $.getJSON("https://pokeapi.co/api/v2/pokemon/", function (result) {
+          for (let i = 0; i < result.results.length; i++) {
+            if (poke == result.results[i].name) {
+              let x = i + 1;
+              $.getJSON(
+                "https://pokeapi.co/api/v2/pokemon/" + x + "/",
+                function (result) {
+                  console.log(result);
+                  document.querySelector(".gambar").innerHTML =
+                    "<img class='gambar' src='" + result.sprites.front_default + "'>";
+                  document.querySelector(".type").innerHTML =
+                    "Type : " +
+                    result.types[0].type.name +
+                    ", " +
+                    result.types[1].type.name;
+                  document.querySelector(".nama").innerHTML = result.name;
+                  document.querySelector(".berat").innerHTML =
+                    "Weight : " + result.weight;
+                }
+              );
+            }
+          }
+        });
+      }
+      function random() {
+        let random = Math.floor(Math.random()*500)+1
+        $.getJSON("https://pokeapi.co/api/v2/pokemon/"+random+"/", function(result){
+          console.log(result)
+          $(".gambar").html("<img class='gambar' src='" + result.sprites.front_default + "'>");
+          $(".type").html("Type : " +
+                    result.types[0].type.name);
+          $(".nama").html(result.name);
+          $(".berat").html("Weight : " + result.weight);
+        })
+      }
+    </script>
+  </body>
+</html>
